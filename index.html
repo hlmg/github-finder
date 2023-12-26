@@ -6,111 +6,34 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GitHub Finder</title>
-  <link rel="stylesheet" href="main.css"/>
+  <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
 </head>
 <body>
-  <header>
-    <P>GitHub Finder</P>
-  </header>
-  <main>
-    <div class="search-container">
-      <p class="search_title">Search GitHub Users</p>
-      <div class="search_guide">Enter a username to fetch a user profile and repos</div>
-      <input class="search_input" type="text">
+  <nav class="navbar navbar-dark bg-primary mb-3">
+    <div class="container">
+      <a href="#" class="navbar-brand">GitHub Finder</a>
     </div>
+  </nav>
 
-    <div class="user-profile">
-      <div class="user-container">
-        <div class="user-container-left">
-          <img src="https://octodex.github.com/images/jetpacktocat.png" class="user_avatar" alt="user avatar">
-        </div>
-
-        <div class="user-container-right">
-          <div class="user-info-container">
-            <div class="user_buttons">
-              <button>Public Repos: 12</button>
-              <button>Public Gists: 1</button>
-              <button>Followers: 2</button>
-              <button>Following: 2</button>
-            </div>
-            <div class="user_info">
-              <text>Company: null</text>
-              <text>Website/Blog: https:www.google.com</text>
-              <text>Korea Bundang-gu</text>
-              <text>Member Since: 2020-02-20T11:00:00Z</text>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button class="user-profile-btn">View Profile</button>
-      </div>
+  <div class="container searchContainer">
+    <div class="search card card-body">
+      <h1>Search GitHub Users</h1>
+      <p class="lead">Enter a username to fetch a user profile and repos</p>
+      <input type="text" id="searchUser" class="form-control" placeholder="GitHub Username...">
     </div>
-
-    <div class="repo-container">
-      <p>Latest Repos</p>
-      <div class="repo_list">
-        <div class="repo">
-          <a href="#">redis</a>
-          <div class="repo_buttons">
-            <button>Stars: 1</button>
-            <button>Watchers: 1</button>
-            <button>Forks: undefined</button>
-          </div>
-        </div>
-        <div class="repo">
-          <a href="#">redis</a>
-          <div class="repo_buttons">
-            <button>Stars: 1</button>
-            <button>Watchers: 1</button>
-            <button>Forks: undefined</button>
-          </div>
-        </div>
-        <div class="repo">
-          <a href="#">redis</a>
-          <div class="repo_buttons">
-            <button>Stars: 1</button>
-            <button>Watchers: 1</button>
-            <button>Forks: undefined</button>
-          </div>
-        </div>
-        <div class="repo">
-          <a href="#">redis</a>
-          <div class="repo_buttons">
-            <button>Stars: 1</button>
-            <button>Watchers: 1</button>
-            <button>Forks: undefined</button>
-          </div>
-        </div>
-        <div class="repo">
-          <a href="#">redis</a>
-          <div class="repo_buttons">
-            <button>Stars: 1</button>
-            <button>Watchers: 1</button>
-            <button>Forks: undefined</button>
-          </div>
-        </div>
-        <div class="repo">
-          <a href="#">redis</a>
-          <div class="repo_buttons">
-            <button>Stars: 1</button>
-            <button>Watchers: 1</button>
-            <button>Forks: undefined</button>
-          </div>
-        </div>
-        <div class="repo">
-          <a href="#">redis</a>
-          <div class="repo_buttons">
-            <button>Stars: 1</button>
-            <button>Watchers: 1</button>
-            <button>Forks: undefined</button>
-          </div>
-        </div>
-      </div>
+    <br>
+    <div id="profile">
     </div>
-  </main>
-  <footer>
-    <text>GitHub Finder &copy</text>
+  </div>
+
+  <footer class="mt-5 p-3 text-center bg-light">
+    GitHub Finder &copy;
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <script src="main.js"></script>
 </body>
 </html>
