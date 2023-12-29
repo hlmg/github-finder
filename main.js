@@ -57,6 +57,20 @@ function generateReposHTML(repos) {
   `).join('');
 }
 
+function debounce(func, delay) {
+  let timeoutId = null;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+
+const debouncedDisplayProfile = debounce(function(username) {
+  displayProfile(username);
+}, 1000); // 1초 지연
+
 searchUserElement.addEventListener('keyup', (e) => {
-  displayProfile(e.target.value);
+  debouncedDisplayProfile(e.target.value);
 });
